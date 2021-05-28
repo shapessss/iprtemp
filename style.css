@@ -1,0 +1,477 @@
+@keyframes loader {
+    0% {
+        transform: scale(1,1);
+    }
+    50% {
+        transform: scale(1.1,1.1);
+    }
+
+}
+
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+}
+
+@keyframes blinker-out {
+    0% {
+      opacity: 50;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap');
+
+@font-face {
+  font-family: "universcom";
+  src: url(universcom-57condensed.woff2);
+}
+
+@font-face {
+  font-family: "universcltpro";
+  src: url(universltpro-boldcond.woff2);
+}
+
+@font-face {
+  font-family: "HK Grotesk";
+  src: url(hk-grotesk.woff2), url(hk-grotesk.woff);
+}
+
+@font-face {
+  font-family: "Univers Condensed Bold";
+  src: url(univers-bold-5871d3ac12757.woff);
+}
+
+@font-face {
+  font-family: "Univers Condensed Medium";
+  src: url(univers-condensed-medium-5871d3fdc2110.woff);
+}
+
+body {
+	font-family: 'universcom', Arial;
+  font-weight: 400;
+  font-style: normal;
+	font-size: 36px;
+	line-height: 1.25;
+	
+	background-color: #000000;
+	color: #ffffff;
+}
+
+h3 a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color .2s;
+}
+
+h3 a:hover {
+  color: #cccccc;
+}
+
+div.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  z-index: 2;
+  
+  transition: opacity 1s;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.loader img {
+  width: 100px;
+}
+
+div.loader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 0 70px 5px 70px;
+  height: 60px;
+  
+  border-bottom: 2px solid #ffffff;
+  
+  background-color: #000000;
+  
+  transition: top 0.3s;
+}
+
+div.logo {
+  width: 38px;
+}
+
+header nav {
+  text-align: right;
+}
+
+header a {
+  margin: 0 0 0 16px;
+  color: #ffffff;
+  transition: color 0.2s;
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+header a:hover {
+  color: #cccccc;
+}
+
+div.social-icons a {
+  margin: 0 0;
+  font-weight: 400;
+}
+
+.page {
+  font-size: 25px;
+  text-transform: uppercase;
+  font-family: 'universcom';
+  font-weight: 400;
+  color: #ff4141;
+  animation: blinker 2s linear infinite;
+  user-select: none;
+}
+
+.stream_relay {
+  bottom: 100px;
+  position: absolute;
+  cursor: pointer;
+}
+
+section {
+  background-color: #000000;
+  min-height: 100vh;
+  padding: 80px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 2px solid #ffffff;
+}
+
+div.content {
+  position: relative;
+}
+
+div.client {
+  font-size: 3vw;
+  font-family: 'universcltpro';
+  user-select: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  
+  margin: 10px 10px;
+}
+
+section.s2 {
+  background-color: #000000;
+}
+
+ul {
+  font-size: 20px;
+}
+
+section.s2 {
+  background-color: #000000;
+}
+
+section.s3 {
+  text-transform: uppercase;
+}
+
+section.mixcloud {
+  background-color: #0014ff;
+  color: #000;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-transform: uppercase;
+}
+
+section.s4 {
+  background-color: #000000;
+  background-image: url(about.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-bottom: 2px solid #ffffff;
+  user-select: none;
+}
+
+section.newsite {
+  background-color: #000000;
+  background-image: url(noisey-image2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-bottom: 2px solid #ffffff;
+  user-select: none;
+}
+
+div.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background-color: #333333;
+  z-index: 1;
+  transition: background-color 0.5s;
+}
+
+/* new schedule */
+.s2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  	grid-gap: 32px 32px;
+    text-align: left;
+  	place-items: stretch stretch;
+}
+
+.schedule_title {
+    font-size: 20px;
+  	margin-bottom: 10px;
+  	text-transform: uppercase;
+
+}
+
+.schedule_item {
+    line-height: 30px;
+    box-sizing: border-box;
+}
+
+.schedule_time, .schedule_show {
+    margin: 5px;
+    font-size: .7em;
+}
+
+.schedule_show {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+li.schedule_item, ul.schedule_list {
+    list-style: none;
+}
+
+ul.schedule_list {
+  margin-bottom: 20px;
+}
+
+#play-pause-button{
+  font-size: 0.7em;
+  color: white;
+}
+
+.foot {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foot img {
+  width: 20px;
+  margin: 20px;
+  transition: opacity 0.5s;
+}
+
+.foot img:hover {
+  opacity: 0.7;
+}
+
+.foot #mixcloud {
+  width: 50px;
+}
+
+/* results */
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 32px 32px;
+  font-size: 12px;
+  text-align: left;
+}
+
+.single-result .image {
+  background-color: #eee;
+  height: 400px;
+  margin-bottom: 16px;
+  border: 2px solid #ffffff;
+}
+
+.single-result img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: fadein 0.7s 0.5s both;
+}
+
+.single-result .loading {
+  background-color: #eee;
+  height: 12px;
+  width: 50%;
+  display: inline-block;
+}
+
+.single-result p .loading {
+  width: 30%;
+}
+/* end results */
+
+/* overlay menu */
+.close-info {
+  display: none;
+}
+
+.close-info a {
+  transition: opacity 0.5s;
+}
+
+.close-info a:hover {
+  opacity: 0.25;
+  transition: opacity 0.5s;
+}
+
+.schedule-menu {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #000;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s;
+}
+
+.schedule-menu.overlay-open {
+  left: 0;
+  opacity: 1;
+  z-index: 4;
+  pointer-events: auto;
+  transition: opacity 0.5s;
+}
+
+.schedule-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+
+.schedule-close a {
+  transition: opacity 0.5s;
+}
+
+.schedule-close a:hover {
+  transition: opacity 0.5s;
+  opacity: 0.25;
+}
+
+.schedule-info {
+
+   margin: 100px auto 100px auto;
+  /*color: #ffffff;
+  text-align: left;
+  margin-bottom: 180px;
+  font-size: 28px;*/
+}
+
+div.schedule-list {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+   grid-gap: 32px 32px;
+   text-align: left;
+   place-items: stretch stretch;
+   margin: 0 40px 0 40px;
+   width: 100%;
+}
+/* overlay menu */
+
+@media only screen and (max-width:1023px) {
+  .s2 {
+		grid-template-columns: 1fr;
+		text-align: left;
+    width: 100%;
+	}
+  
+  div.schedule-list {
+    grid-template-columns: 1fr;
+    width: 80%;
+  }
+	
+	.schedule_item {
+		margin: 0;
+	}
+  
+  .schedule_time, .schedule_show {
+    font-size: .5em;
+}
+  
+  nav {
+    display: none;
+  }
+  
+  div.logo {
+    margin: auto;
+    width: 48px;
+  }
+  
+  div.social-icons {
+    display: none;
+  }
+  
+  header {
+    border: none;
+    padding: 20px 20px;
+    height: 80px;
+  }
+  
+  .page {
+  	font-size: 20px;
+	}
+  
+  div.client {
+  	font-size: 30px;
+	}
+  
+  .content p {
+    font-size: 20px;
+  }
+  
+  div.client {
+    font-size: 5vw;
+  }
+
+/* player */
+#play-pause-button{
+  font-size: 1em;
+  color: white;
+}
