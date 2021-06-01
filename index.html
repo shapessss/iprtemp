@@ -29,6 +29,25 @@
 		<script>
 			Weglot.initialize({
 				api_key: 'wg_ade538d77a4eed5b43414e154cc004545'
+
+							switchers: [
+				{
+					// Same as button_style at root
+					button_style: {
+						full_name: true,
+						with_name: true,
+						is_dropdown: true,
+						with_flags: true,
+						flag_type: "circle",
+						invert_flags: false
+					},
+					// Move switcher somewhere in the page
+					location: {
+						target: ".header-nav",
+						sibling: null
+					}
+				}
+			]
 			});
 		</script>
 	</head>
